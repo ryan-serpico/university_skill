@@ -1,0 +1,30 @@
+{
+
+    "intents": [{
+
+        "intent": "testIntent",
+
+        "slots": [{
+
+            "name": "univ_name",
+
+            "type": "AMAZON.EducationalOrganization"
+
+        }]
+
+
+    }, {
+
+        "intent": "univSearchIntent",
+
+        "slots": [{
+
+            "name": "first",
+
+            "type": "AMAZON.NUMBER"
+
+        }]
+
+    }]
+
+}
