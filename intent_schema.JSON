@@ -25,6 +25,59 @@
 
         }]
 
-    }]
+    }, {
+
+        "intent": "gradRateIntent",
+
+        "slots": [{
+
+            "name": "univName",
+
+            "type": "AMAZON.EducationalOrganization"
+
+        }]
+
+    }, {
+
+        "intent": "tuitionIntent",
+
+        "slots": [{
+
+            "name": "univName",
+
+            "type": "AMAZON.EducationalOrganization"
+
+        }]
+
+    }, {
+
+        "intent": "earningsIntent",
+
+        "slots": [{
+
+            "name": "univName",
+
+            "type": "AMAZON.EducationalOrganization"
+
+        }]
+
+    }, {
+
+        "intent": "univLocationIntent",
+
+        "slots": [{
+
+            "name": "univName",
+
+            "type": "AMAZON.EducationalOrganization"
+
+        }]
+
+    }, {
+        "intent": "aboutIntent"
+    }, {
+        "intent": "AMAZON.StopIntent"
+    }
+  ]
 
 }

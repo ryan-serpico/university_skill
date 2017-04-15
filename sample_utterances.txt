@@ -1,8 +1,14 @@
-testIntent {univName}
-testIntent say {univName}
-testIntent repeat {univName}
-
-
+univSearchIntent {univName}
 univSearchIntent tell me about {univName}
 univSearchIntent explore {univName}
 univSearchIntent let's learn about {univName}
+
+gradRateIntent What is the graduation rate of {univName}
+
+univLocationIntent Where is {univName}
+
+tuitionIntent How much does it cost to attend {univName}
+
+earningsIntent How much do people make after graduating {univName}
+
+aboutIntent Where do you get your information from

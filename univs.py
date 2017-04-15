@@ -28,7 +28,7 @@ def get_univ(source, thing2):
 @ask.launch
 def start_skill():
     welcome_message = 'Welcome to University Explorer. What university would you like to know about?'
-    return question(welcome_message)
+    return question(welcome_message).reprompt("What university would you like to know about?")
 
 @ask.intent("testIntent")
 def test_intent(univName):
@@ -38,12 +38,40 @@ def test_intent(univName):
 @ask.intent("univSearchIntent")
 def share_univs(univName):
     univ_name, city_name, state_name, cost_to_attend, grad_rate, md_earnings = get_univ(UNIVS, univName)
-    univ_message = 'The {} is based in {}, {}.  The average annual cost to attend is {}, the graduation rate is {} and the median salary after attending is {}.'.format(univ_name, city_name, state_name, cost_to_attend, grad_rate, md_earnings)
-    return statement(univ_message)
+    univ_message = 'The {} is based in {}, {}.  The average annual cost to attend is {}, the graduation rate is {} and the median salary after graduation is {}.'.format(univ_name, city_name, state_name, cost_to_attend, grad_rate, md_earnings)
+    return statement(univ_message).simple_card("School: {}".format(univName), univ_message)
+
+@ask.intent("gradRateIntent")
+def grad_rate_intent(univName):
+    univ_name, city_name, state_name, cost_to_attend, grad_rate, md_earnings = get_univ(UNIVS, univName)
+    grad_msg = "The graduation rate of {} is {}.".format(univ_name, grad_rate)
+    return statement(grad_msg).simple_card("Graduation rate of {}".format(univName), grad_msg)
+
+@ask.intent("univLocationIntent")
+def univ_location_intent(univName):
+    univ_name, city_name, state_name, cost_to_attend, grad_rate, md_earnings = get_univ(UNIVS, univName)
+    location_msg = "{} is in {}, {}.".format(univ_name, city_name, state_name)
+    return statement(location_msg).simple_card("The location of {}".format(univName), location_msg)
+
+@ask.intent("tuitionIntent")
+def tuition_intent(univName):
+    univ_name, city_name, state_name, cost_to_attend, grad_rate, md_earnings = get_univ(UNIVS, univName)
+    tuition_msg = "The cost to attend {} each year comes out to be {}.".format(univ_name, cost_to_attend)
+    return statement(tuition_msg).simple_card("The cost to attend {}".format(univName), tuition_msg)
+
+@ask.intent("earningsIntent")
+def earnings_intent(univName):
+    univ_name, city_name, state_name, cost_to_attend, grad_rate, md_earnings = get_univ(UNIVS, univName)
+    earnings_msg = "The median salary after graduating from {} is {}.".format(univ_name, md_earnings)
+    return statement(earnings_msg).simple_card("Median earnings after attending {}".format(univName), earnings_msg)
 
 @ask.intent("aboutIntent")
 def about_intent():
     return statement("All of my information is from the Department of Education's college scorecard dataset.")
+
+@ask.intent("AMAZON.StopIntent")
+def stop():
+    return statement("Stopping")
 
 
 
