@@ -1,2 +1,8 @@
-testIntent {{univ_name}}
-testIntent Say {{univ_name}}
+testIntent {univName}
+testIntent say {univName}
+testIntent repeat {univName}
+
+
+univSearchIntent tell me about {univName}
+univSearchIntent explore {univName}
+univSearchIntent let's learn about {univName}

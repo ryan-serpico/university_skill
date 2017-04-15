@@ -6,7 +6,7 @@
 
         "slots": [{
 
-            "name": "univ_name",
+            "name": "univName",
 
             "type": "AMAZON.EducationalOrganization"
 
@@ -19,9 +19,9 @@
 
         "slots": [{
 
-            "name": "first",
+            "name": "univName",
 
-            "type": "AMAZON.NUMBER"
+            "type": "AMAZON.EducationalOrganization"
 
         }]
 
