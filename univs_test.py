@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 def get_univ(source):
     # univ_name in the following line is only meant to be temporary. The final prodouct will not be hardcoded and will instead take what the user says.
-    univ_name = "university of miami"
+    univ_name = "Georgetown University"
     for row in source:
         if univ_name.lower() == row["univ_name"].lower():
             univ_name = row["univ_name"]

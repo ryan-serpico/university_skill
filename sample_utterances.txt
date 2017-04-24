@@ -1,14 +1,26 @@
 univSearchIntent {univName}
 univSearchIntent tell me about {univName}
-univSearchIntent explore {univName}
-univSearchIntent let's learn about {univName}
+univSearchIntent tell me about the {univName}
+univSearchIntent explore the {univName}
 
 gradRateIntent What is the graduation rate of {univName}
+gradRateIntent What is the graduation rate of the {univName}
+gradRateIntent What percentage of students graduate from {univName}
+gradRateIntent What percentage of students graduate from the {univName}
+gradRateIntent How many students graduate from {univName}
 
 univLocationIntent Where is {univName}
+univLocationIntent Where is the {univName}
+univLocationIntent Where is {univName} located
+univLocationIntent Where is the {univName} located
 
 tuitionIntent How much does it cost to attend {univName}
+tuitionIntent How much does it cost to attend the {univName}
+tuitionIntent What is tuition at {univName}
+tuitionIntent What is tuition at the {univName}
 
 earningsIntent How much do people make after graduating {univName}
+earningsIntent How much do people make after graduating the {univName}
+earningsIntent What is the median salary after people graduate from {univName}
 
 aboutIntent Where do you get your information from

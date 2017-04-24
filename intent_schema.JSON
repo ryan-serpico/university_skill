@@ -2,19 +2,6 @@
 
     "intents": [{
 
-        "intent": "testIntent",
-
-        "slots": [{
-
-            "name": "univName",
-
-            "type": "AMAZON.EducationalOrganization"
-
-        }]
-
-
-    }, {
-
         "intent": "univSearchIntent",
 
         "slots": [{
