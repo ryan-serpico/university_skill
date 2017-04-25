@@ -5,12 +5,12 @@ For my final project in Advanced Web Apps at the University of Florida I decided
 
 My skill, called University Explorer, allows users to learn more about any university in the United States by speaking to their Alexa-enabled devices. The initial set of information that users can ask University Explorer is the location, the graduation rate, the median income after graduation and the average yearly tuition to the university. 
 
-I built the skill using John Wheeler’s Flask-ASK library, and I recommend everyone to check it out. Wheeler has made it super simple to learn how to build Alexa skills. 
+I built the skill using John Wheeler’s [Flask-ASK library][1], and I recommend everyone to check it out. Wheeler has made it super simple to learn how to build Alexa skills. 
 
 ## The Data
-All of the data for University Explorer comes from the U.S. Department of Education’s [College Scorecard Dataset](https://collegescorecard.ed.gov/data/). I came across the data while I was poking around [data.gov](https://www.data.gov), an invaluable resource for anyone learning how to build web apps who needs some data to practice with. 
+All of the data for University Explorer comes from the U.S. Department of Education’s [College Scorecard Dataset][2]. I came across the data while I was poking around [data.gov][3], an invaluable resource for anyone learning how to build web apps who needs some data to practice with. 
 
-After downloading a CSV file with all of the [latest data from data.gov](https://catalog.data.gov/dataset/college-scorecard), I filtered out all of the extraneous data that I didn’t need and then threw what I needed into [Mr. Data Converter](https://shancarter.github.io/mr-data-converter/) to convert it into a python dictionary.
+After downloading a CSV file with all of the [latest data from data.gov][4], I filtered out all of the extraneous data that I didn’t need and then threw what I needed into [Mr. Data Converter][5] to convert it into a python dictionary.
 
 While building the skill, I ran into a few issues that required me to clean up the data. This included “é” in Puerto Rican schools, hyphenated university names as in the University of Wisconsin-Madison as well as “&”’s like Texas A&M University. Turns out Alexa, just like humans, doesn’t completely listen for punctuation. 
 
@@ -23,12 +23,22 @@ I’m not going to go through how Alexa works here, but I will say that once you
 
 I created an intent that greets the user and asks him or her what university they want to learn about. If they don’t say anything, I have added `.reprompt` to repeat the question. I also have the skill writing cards to send back to the main Alexa app on user’s phones so that they can read what Alexa said to them. 
 
-## Other resources. 
+## Other resources.
 All of the libraries and the like that I used in my project are located in my requirements.txt file, but here are some of the resources that I used in making my very first Alexa skill. 
 
-* [AlexaTutorial.com | Master the Alexa Skills Kit with Python](https://alexatutorial.com)
-* [Intro and Skill Logic - Alexa Skills w/ Python and Flask-Ask Part 1](https://pythonprogramming.net/intro-alexa-skill-flask-ask-python-tutorial/)
-* [ngrok](https://ngrok.com) (You need this if you want to test your skill with an actual Alexa-enabled device)
+* [AlexaTutorial.com | Master the Alexa Skills Kit with Python][6]
+* [Intro and Skill Logic - Alexa Skills w/ Python and Flask-Ask Part 1][7]
+* [ngrok][8] (You need this if you want to test your skill with an actual Alexa-enabled device)
 
-## Next steps. 
-The next step for University Explorer is obviously to have it certified by Amazon so that anyone with an Alexa-enabled device can use my skill. I’m going to be using [John Wheeler’s tutorial](https://www.youtube.com/watch?v=mjWV4R2P4ks) of deploying skills to Amazon’s Lambda service. 
+## Next steps.
+The next step for University Explorer is obviously to have it certified by Amazon so that anyone with an Alexa-enabled device can use my skill. I’m going to be using [John Wheeler’s tutorial][9] of deploying skills to Amazon’s Lambda service. 
+
+[1]:	https://github.com/johnwheeler/flask-ask
+[2]:	https://collegescorecard.ed.gov/data/
+[3]:	https://www.data.gov
+[4]:	https://catalog.data.gov/dataset/college-scorecard
+[5]:	https://shancarter.github.io/mr-data-converter/
+[6]:	https://alexatutorial.com
+[7]:	https://pythonprogramming.net/intro-alexa-skill-flask-ask-python-tutorial/
+[8]:	https://ngrok.com
+[9]:	https://www.youtube.com/watch?v=mjWV4R2P4ks
