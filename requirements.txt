@@ -1,6 +1,6 @@
 cffi==1.13.2
 Click==7.0
-cryptography==2.8
+cryptography==3.2
 enum34==1.1.6
 Flask==1.1.1
 ipaddress==1.0.23
